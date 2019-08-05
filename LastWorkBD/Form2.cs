@@ -27,5 +27,24 @@ namespace LastWorkBD
         {
             Environment.Exit(0);
         }
+        private void initialiser() {
+
+            IDPARTICIPANT.Text = "";
+            NOMPARTICIPANT.Text = "";
+            NATUREPARTICIPANT.Text = "";
+            INSTRUMENT.Text = "";
+            NPLAGE.Text = "";
+            NOMPLAGE.Text = "";
+            FAMILLE.Text = "";
+            GENRE.Text = "";
+            IDCD.Text = "";
+            TITRECD.Text = "";
+            NDEDITION.Text = "";
+            EDITEUR.Text = "";
+            ANNEEEDITION.Text = "";
+            COLLECTION.Text = "";
+
+        }
+
     }
 }

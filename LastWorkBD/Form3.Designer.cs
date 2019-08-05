@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.PLAGE = new DevComponents.DotNetBar.ButtonX();
+            this.CD = new DevComponents.DotNetBar.ButtonX();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -45,30 +45,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(883, 220);
             this.dataGridView1.TabIndex = 0;
             // 
-            // buttonX1
+            // PLAGE
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX1.Location = new System.Drawing.Point(72, 48);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(130, 61);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 1;
-            this.buttonX1.Text = "Plage";
+            this.PLAGE.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PLAGE.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.PLAGE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PLAGE.Location = new System.Drawing.Point(72, 48);
+            this.PLAGE.Name = "PLAGE";
+            this.PLAGE.Size = new System.Drawing.Size(130, 61);
+            this.PLAGE.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.PLAGE.TabIndex = 1;
+            this.PLAGE.Text = "Plage";
             // 
-            // buttonX2
+            // CD
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Location = new System.Drawing.Point(295, 48);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(130, 61);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 2;
-            this.buttonX2.Text = "CD";
-            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
+            this.CD.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.CD.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.CD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CD.Location = new System.Drawing.Point(295, 48);
+            this.CD.Name = "CD";
+            this.CD.Size = new System.Drawing.Size(130, 61);
+            this.CD.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CD.TabIndex = 2;
+            this.CD.Text = "CD";
+            this.CD.Click += new System.EventHandler(this.buttonX2_Click);
             // 
             // buttonX3
             // 
@@ -113,8 +113,8 @@
             this.ClientSize = new System.Drawing.Size(978, 519);
             this.Controls.Add(this.buttonX4);
             this.Controls.Add(this.buttonX3);
-            this.Controls.Add(this.buttonX2);
-            this.Controls.Add(this.buttonX1);
+            this.Controls.Add(this.CD);
+            this.Controls.Add(this.PLAGE);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form3";
@@ -127,8 +127,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX PLAGE;
+        private DevComponents.DotNetBar.ButtonX CD;
         private DevComponents.DotNetBar.ButtonX buttonX3;
         private DevComponents.DotNetBar.ButtonX buttonX4;
         private System.Windows.Forms.GroupBox groupBox1;
