@@ -9,3 +9,6 @@ c:\users\jonathan manzako\documents\visual studio 2012\Projects\LastWorkBD\LastW
 C:\Users\Jonathan Manzako\documents\visual studio 2012\Projects\LastWorkBD\LastWorkBD\obj\Debug\LastWorkBD.Form2.resources
 C:\Users\Jonathan Manzako\documents\visual studio 2012\Projects\LastWorkBD\LastWorkBD\obj\Debug\LastWorkBD.Form3.resources
 C:\Users\Jonathan Manzako\documents\visual studio 2012\Projects\LastWorkBD\LastWorkBD\obj\Debug\LastWorkBD.Form4.resources
+C:\Users\Jonathan Manzako\documents\visual studio 2012\Projects\LastWorkBD\LastWorkBD\bin\Debug\LastWorkBD.exe.config
+C:\Users\Jonathan Manzako\documents\visual studio 2012\Projects\LastWorkBD\LastWorkBD\obj\Debug\RdlCompile.cache
+C:\Users\Jonathan Manzako\documents\visual studio 2012\Projects\LastWorkBD\LastWorkBD\obj\Debug\RdlCompile.compiled

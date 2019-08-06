@@ -39,6 +39,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(31, 206);
             this.dataGridView1.Name = "dataGridView1";
@@ -56,6 +57,7 @@
             this.PLAGE.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.PLAGE.TabIndex = 1;
             this.PLAGE.Text = "Plage";
+            this.PLAGE.Click += new System.EventHandler(this.PLAGE_Click);
             // 
             // CD
             // 

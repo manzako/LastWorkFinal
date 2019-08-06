@@ -9,7 +9,7 @@ namespace LastWorkBD
 {
    public class Operation
     {
-       string chaine = @"Data Source=DESKTOP-VPOQSD0\MANZAKO; Initial Catalog=LASTWORKBD; Integrated Security=true";
+     public  string chaine = @"Data Source=DESKTOP-VPOQSD0\MANZAKO; Initial Catalog=LASTWORKBD; Integrated Security=true";
        
        public int ecrire(string requete) {
 
@@ -22,9 +22,6 @@ namespace LastWorkBD
            return nbre;
        }
 
-       public void lire() { 
        
-       }
-
     }
 }
