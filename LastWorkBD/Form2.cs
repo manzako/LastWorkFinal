@@ -19,6 +19,8 @@ namespace LastWorkBD
         public string hererequete2;
         public string hererequete3;
         public string hererequete4;
+        public string hererequete5;
+        public string hererequete6;
         
         public Form2()
         {
@@ -76,60 +78,53 @@ namespace LastWorkBD
         }
         public void conversionchiffre() {
             int idp, nplg, idcd, nedt;
-            if (int.TryParse(IDPARTICIPANT.Text, out idp)){
+            if (int.TryParse(IDPARTICIPANT.Text, out idp) && int.TryParse(NPLAGE.Text, out nplg) && int.TryParse(NDEDITION.Text, out nedt) && int.TryParse(IDCD.Text, out idcd))
+            {
+                //Ajout ou Insertion des données dans la table PARTICIPANT
                 idp1 = idp;
                 recuperattext();
                 hererequete2 = "Insert into PARTICIPANT(ID_PARTICIPANT,NOM_PARTICIPANT,NATURE_PART,INSTRUMENT) values(" + idp1 + ",\'" + nmp + "\',\'" + nap + "\',\'" + inst + "\')";
                 Operation op2 = new Operation();
                 op2.ecrire(hererequete2);
-                MessageBox.Show("Ajout participant reussi");
-            }else{
-                MessageBox.Show("Identifiant en chiffre svp");
-                IDPARTICIPANT.Text = "";
-            }
-            if (int.TryParse(NPLAGE.Text, out nplg))
-            {
+               // MessageBox.Show("Ajout participant reussi");
+                //Ajout ou Insertion des données dans la table PLAGE
                 nplg1 = nplg;
                 recuperattext();
                 hererequete1 = "Insert into PLAGE(NPLAGE,NOM_PLAGE,FAMILLE,GENRE) values(" + nplg1 + ",\'" + npl + "\',\'" + fam + "\',\'" + gen + "\')";
                 Operation op1 = new Operation();
                 op1.ecrire(hererequete1);
-                MessageBox.Show("ajout plage reussi");
-            }
-            else
-            {
-                MessageBox.Show("N plage en chiffre svp");
-                NPLAGE.Text = "";
-            }
-            if (int.TryParse(IDCD.Text, out idcd))
-            {
+                //MessageBox.Show("ajout plage reussi");
+                //Ajout ou Insertion des données dans la table  EDITION
+                nedt1 = nedt;
+                recuperattext();
+                hererequete3 = "Insert into EDITION(N_EDITION,EDITEUR,ANNEE_EDITION,COLLECTIONN) values(" + nedt1 + ",\'" + edt + "\',\'" + aned + "\',\'" + col + "\')";
+                Operation op3 = new Operation();
+                op3.ecrire(hererequete3);
+               // MessageBox.Show("Ajout Edition reussi");
+                //Ajout ou Insertion des données dans la table CD
                 idcd1 = idcd;
                 recuperattext();
                 hererequete4 = "Insert into CD(ID_CD,TITRE_CD,N_EDITION) values(" + idcd1 + ",\'" + tit + "\'," + nedt1 + ")";
                 Operation op4 = new Operation();
                 op4.ecrire(hererequete4);
-                MessageBox.Show("ajout CD reussi");
+                //MessageBox.Show("ajout CD reussi");
+                //Ajout ou Insertion des donnees dans nos tables qui n'ont que des clés etrangères, à savoir PARTICIPER ET APPARTENIR
+                hererequete5 = "Insert into PARTICIPER(ID_PARTICIPANT,NPLAGE) values ("+idp1+","+nplg1+")";
+                hererequete6 = "Insert into APPARTENIR(NPLAGE,ID_CD) values ("+nplg1+","+idcd1+")";
+                Operation op5 = new Operation();
+                op5.ecrire(hererequete5);
+                op5.ecrire(hererequete6);
+                MessageBox.Show("Ajout Reussi");
+                initialiser();
 
-            }
-            else
-            {
-                MessageBox.Show("Identifiant cd  en chiffre svp");
+            }else{
+                MessageBox.Show("Identifiant en chiffre svp");
+                IDPARTICIPANT.Text = "";
+                NPLAGE.Text = "";
+                NDEDITION.Text = "";
                 IDCD.Text = "";
             }
-            if (int.TryParse(NDEDITION.Text, out nedt))
-            {
-                nedt1 = nedt;
-                recuperattext();
-                hererequete3 = "Insert into EDITION(N_EDITIN,EDITEUR,ANNEE_EDITION,COLLECTIONN) values(" + nedt1 + ",\'" + edt + "\',\'" + aned + "\',\'" + col + "\')";
-                Operation op3 = new Operation();
-                op3.ecrire(hererequete3);
-                MessageBox.Show("Ajout Edition reussi");
-            }
-            else
-            {
-                MessageBox.Show("N Edition en chiffre svp");
-                NDEDITION.Text = "";
-            }
+           
         }
         private void verification() {
 
@@ -153,7 +148,6 @@ namespace LastWorkBD
             try
             {
                 verification();
-                initialiser();
                                
             }
             catch(Exception EX){
