@@ -92,6 +92,7 @@
             // 
             this.NATUREPARTICIPANT.DisplayMember = "Text";
             this.NATUREPARTICIPANT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.NATUREPARTICIPANT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NATUREPARTICIPANT.FormattingEnabled = true;
             this.NATUREPARTICIPANT.ItemHeight = 16;
             this.NATUREPARTICIPANT.Location = new System.Drawing.Point(244, 110);
@@ -99,6 +100,7 @@
             this.NATUREPARTICIPANT.Size = new System.Drawing.Size(151, 22);
             this.NATUREPARTICIPANT.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.NATUREPARTICIPANT.TabIndex = 7;
+            this.NATUREPARTICIPANT.SelectedIndexChanged += new System.EventHandler(this.NATUREPARTICIPANT_SelectedIndexChanged);
             // 
             // INSTRUMENT
             // 
@@ -215,6 +217,7 @@
             // 
             this.GENRE.DisplayMember = "Text";
             this.GENRE.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GENRE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GENRE.FormattingEnabled = true;
             this.GENRE.ItemHeight = 16;
             this.GENRE.Location = new System.Drawing.Point(235, 152);
@@ -227,6 +230,7 @@
             // 
             this.FAMILLE.DisplayMember = "Text";
             this.FAMILLE.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.FAMILLE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FAMILLE.FormattingEnabled = true;
             this.FAMILLE.ItemHeight = 16;
             this.FAMILLE.Location = new System.Drawing.Point(235, 110);
@@ -518,6 +522,7 @@
             this.SAUVER.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.SAUVER.TabIndex = 4;
             this.SAUVER.Text = "Sauver";
+            this.SAUVER.Click += new System.EventHandler(this.SAUVER_Click);
             // 
             // ANNULER
             // 
@@ -530,6 +535,7 @@
             this.ANNULER.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ANNULER.TabIndex = 5;
             this.ANNULER.Text = "Annuler";
+            this.ANNULER.Click += new System.EventHandler(this.ANNULER_Click);
             // 
             // buttonX3
             // 
@@ -572,6 +578,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

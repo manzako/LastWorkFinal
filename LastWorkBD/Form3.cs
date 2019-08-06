@@ -32,5 +32,10 @@ namespace LastWorkBD
             Form1 form15 = new Form1();
             form15.Show();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
